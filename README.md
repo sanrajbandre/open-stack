@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # BigData Jobs Profiling AI Agent
 
 This repository contains a Python utility designed to profile and tune
@@ -219,3 +220,7 @@ cron or Oozie to execute hourly or daily depending on your needs.
 
 This project is provided without warranty under the terms of the MIT
 License.  See `LICENSE` for details.
+=======
+# open-stack
+AI agent for profiling Spark jobs on multi‐cluster Hadoop environments.
+>>>>>>> b6930ad0cb7380fcad3ed250ea36af6365137fed
