@@ -1,0 +1,29 @@
+# Example multi‑cluster configuration for the AI agent
+# Provide your database credentials and (optionally) Slack/Git settings here.
+# Each cluster entry should include a name, and either yarn_api_url or yarn_ui_url,
+# and spark_history_url or spark_ui_url.  The agent will fall back to UI URLs if
+# API URLs are omitted.
+
+mysql_host: localhost
+mysql_port: 3306
+mysql_user: profiler
+mysql_password: secret
+mysql_database: job_profile
+openai_api_key: your-openai-key
+slack_webhook_url: https://hooks.slack.com/services/T000/B000/XXX
+git_repo_path: /opt/job-config-repo
+git_remote_url: git@example.com:org/job-config.git
+clusters:
+  - name: LAKE-1
+    yarn_api_url: http://10.140.145.85:8088
+    spark_history_url: http://10.140.145.91:18081
+    namenode_namespace: LAKE-1-NAMESPACE
+    yarn_ui_url: http://10.140.145.85:8088
+    spark_ui_url: http://10.140.145.91:18081
+  - name: LAKE-2
+    yarn_api_url: http://10.140.145.95:8088
+    spark_history_url: http://10.140.145.101:18081
+    namenode_namespace: LAKE-2-NAMESPACE
+    yarn_ui_url: http://10.140.145.95:8088
+    spark_ui_url: http://10.140.145.101:18081
+  # add other clusters here…

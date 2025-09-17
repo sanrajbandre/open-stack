@@ -1,0 +1,6 @@
+requests>=2.25.1
+mysql-connector-python>=8.0
+openai>=0.28
+PyYAML>=5.4
+GitPython>=3.1
+# Slack uses requests for webhook; no extra dependency required
